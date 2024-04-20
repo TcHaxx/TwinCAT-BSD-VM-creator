@@ -24,6 +24,11 @@ Usage
 PS C:\YOUR_FOLDER\.\Create-TcBsdVM.ps1 MyLovelyTcBSD TCBSD-x64-12-40411.iso
 ~~~
 
+### Unattended installation
+
+For an unattended installation, run `Create-TcBsdVM-Unattended.ps1` with the same parameters as `Create-TcBsdVM.ps1`.  
+However, you may want to provide a password for user `Administrator`, e.g. `Create-TcBsdVM-Unattended.ps1 -vmName myVM -adminPW YOUR-PASSWORD`
+
 # Setting up the network interface
 
 If VMs network defaults to `NAT`, you may not be able to connect to the PLC. Therefore you should set the virtual network either to `Host-Only Adapter` if you are working with the PLC only from the host computer; or `Bridged Adpater` to set up a physical connection to the outside network.
